@@ -19,3 +19,10 @@ body {
 .clickable {
   cursor: pointer;
 }
+
+.container {
+  width: 80vw;
+  height: 100vh;
+  padding: 2rem;
+  flex-wrap: wrap;
+}

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Card.css";
 import Rating from "./Rating";
+import { Link } from "react-router-dom";
 
 import { SiAmazonaws } from "react-icons/si";
 
-const Card = ({ name, details, rating, count, nextBatch }) => {
+const Card = ({ course, history }) => {
   const [isHovered, setHover] = useState(false);
 
   return (
@@ -12,16 +13,22 @@ const Card = ({ name, details, rating, count, nextBatch }) => {
       className="card clickable"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onClick={() => history.push(`/courses/${course._id}`)}
     >
-      <head className="card__header">
+      <head
+        className="card__header"
+        style={{ background: `linear-gradient${course.skin}` }}
+      >
         <SiAmazonaws className="card__header__icon" size="100" />
-        AWS Certification Training - Solutions Architect
+        {course.title.toUpperCase()}
       </head>
+
       <body className="card__body">
-        <p>AWS Certification Training - Solutions Arc..</p>
+        <p>{course.title}</p>
         <span className="card__body__review">Review</span>
-        <Rating />
+        <Rating value={course.rating} studentsCount={course.students} />
       </body>
+
       {isHovered && (
         <section className="card__hover">
           <span className="card__hover__head">Next Batch</span>
@@ -33,9 +40,9 @@ const Card = ({ name, details, rating, count, nextBatch }) => {
           <span className="card__hover__head"> What Will I learn? </span>
 
           <ul className="card__hover__details">
-            <li>Introduction</li>
-            <li>Deployment</li>
-            <li>Experience</li>
+            {course.details &&
+              course.details.length > 0 &&
+              course.details.map((item) => <li>{item}</li>)}
           </ul>
           <button className="card__hover__btn">View Details</button>
         </section>

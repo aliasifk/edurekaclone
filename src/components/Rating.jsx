@@ -2,16 +2,17 @@ import React from "react";
 import { BiStar } from "react-icons/bi";
 import "./Rating.css";
 
-const Rating = ({ value, usersCount }) => {
+const Rating = ({ value, studentsCount }) => {
   return (
-    <div className="rating">
+    <section className="rating">
       <BiStar />
       <BiStar />
       <BiStar />
       <BiStar />
       <BiStar />
-      <span>(1023)</span>
-    </div>
+      <span className="rating__value">{value}</span>
+      <span className="rating__students">{studentsCount}</span>
+    </section>
   );
 };
 

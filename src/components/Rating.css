@@ -1,4 +1,16 @@
 .rating {
   display: flex;
-  margin-top: 4px;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.rating__value {
+  margin-left: 4px;
+  margin-right: 6px;
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+.rating__students {
+  font-size: 1.5rem;
 }
