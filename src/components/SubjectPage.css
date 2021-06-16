@@ -63,6 +63,10 @@
   height: auto;
 }
 
+.course-details__table__row:hover {
+  background-color: #deeffd;
+}
+
 .course-details__table__row.disabled {
   opacity: 0.5;
   cursor: no-drop;

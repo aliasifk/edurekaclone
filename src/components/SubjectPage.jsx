@@ -41,7 +41,11 @@ const SubjectPage = ({ match, history }) => {
                 .toUpperCase();
 
               return (
-                <tr className="course-details__table__row">
+                <tr
+                  className={`course-details__table__row ${
+                    b.status === "SOLD OUT" && "disabled"
+                  }`}
+                >
                   <td className="course-details__table__c1">{`${month} ${date.getDate()}`}</td>
                   <td className="course-details__table__c2">
                     {b.day}
