@@ -8,7 +8,6 @@ const Cards = ({ history }) => {
   useEffect(() => {
     const result = getCourses();
     //get Api calls here
-
     setCourses(result);
   }, []);
 

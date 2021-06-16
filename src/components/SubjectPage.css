@@ -1,0 +1,112 @@
+.course-details {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #0072d2, #00b6c3);
+  font-size: 1.5rem;
+  padding: 5rem;
+}
+
+.course-details__container {
+  display: flex;
+  padding: 2rem;
+  border-radius: 10px;
+  color: black;
+  background-image: linear-gradient(to right, #ffffff, #f0f6f7);
+  font-weight: 600;
+}
+
+.course-details__table:first-child {
+  border-top: 1px solid #d7d7d7;
+}
+
+.course-details__table__c1 {
+  padding: 1rem;
+  padding-right: 4rem;
+  margin-right: 10rem;
+  border-right: 1px solid #d7d7d7;
+}
+.course-details__table__c2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20rem;
+}
+
+.course-details__table__c2__info {
+  color: rgb(30, 60, 158);
+  font-size: 1.4rem;
+}
+
+.course-details__table__c3__info {
+  color: rgb(255, 26, 19);
+  font-size: 1.4rem;
+}
+
+.course-details__table__c3 {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.course-details__table__row {
+  border-bottom: 1px solid #d7d7d7;
+  border-left: 1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  min-height: 57px;
+  height: auto;
+}
+
+.course-details__table__row.disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background: #f5f5f5;
+}
+
+.course-details__pricing {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  padding-right: 2rem;
+}
+.course-details__pricing__prices {
+  margin-top: 2rem;
+}
+.course-details__pricing__prices .discounted {
+  font-size: 3.8rem;
+  padding-right: 1rem;
+}
+.course-details__pricing__prices .total {
+  font-size: 2.1rem;
+  text-decoration: line-through;
+  color: rgb(70, 70, 70);
+}
+
+.course-details__pricing__offerdetails {
+  color: rgb(73, 172, 73);
+  padding-top: 1rem;
+  font-weight: bold;
+}
+.course-details__pricing__button {
+  background: linear-gradient(97deg, #f5a623, #f76b1c);
+  border: 0;
+  margin-top: 2rem;
+  width: 30rem;
+  padding: 2rem 6rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #eeeeee;
+  border-radius: 5px;
+}
+.course-details__pricing__button:hover {
+  background: linear-gradient(230deg, #ffce80, #cc4b00);
+}
+.course-details__pricing__button:active {
+  background: linear-gradient(230deg, #ffffff, #ff7b00);
+}

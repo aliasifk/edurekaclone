@@ -16,29 +16,35 @@ const courses = [
     batch: [
       {
         date: "2021-06-14",
+        day: "SAT & SUN (5 WEEKS)",
         status: "SOLD OUT",
         timings: "07:00 AM to 09:00 AM (IST)",
+        info: "Weekend Batch",
       },
       {
         date: "2021-06-19",
-        status: "FILLING FAST",
+        status: "SOLD OUT",
+        day: "MON - FRI (15 DAYS)",
         timings: "08:30 PM to 10:30 PM (IST)",
-        info: "Weekend Batch",
       },
       {
         date: "2021-06-21",
         status: "NORMAL",
+        day: "SAT & SUN (5 WEEKS)",
         timings: "08:30 PM to 10:30 PM (IST)",
+        info: "Weekend Batch",
       },
       {
         date: "2021-07-17",
         status: "NORMAL",
+        day: "SAT & SUN (5 WEEKS)",
         timings: "07:00 AM to 09:00 AM (IST)",
         info: "Weekend Batch",
       },
       {
-        date: "2021-06-19",
+        date: "2021-07-19",
         status: "NORMAL",
+        day: "MON - FRI (15 DAYS)",
         timings: "07:00 AM to 09:00 AM (IST)",
       },
     ],
@@ -53,33 +59,38 @@ const courses = [
     price: 19000,
     discount: 10,
     details: ["introduction", "deployment", "experience"],
-
     batch: [
       {
         date: "2021-06-14",
+        day: "SAT & SUN (5 WEEKS)",
         status: "SOLD OUT",
         timings: "07:00 AM to 09:00 AM (IST)",
+        info: "Weekend Batch",
       },
       {
         date: "2021-06-19",
         status: "FILLING FAST",
+        day: "MON - FRI (15 DAYS)",
         timings: "08:30 PM to 10:30 PM (IST)",
-        info: "Weekend Batch",
       },
       {
         date: "2021-06-21",
-        status: "NORMAL",
+        status: "FILLING FAST",
+        day: "SAT & SUN (5 WEEKS)",
         timings: "08:30 PM to 10:30 PM (IST)",
+        info: "Weekend Batch",
       },
       {
         date: "2021-07-17",
         status: "NORMAL",
+        day: "SAT & SUN (5 WEEKS)",
         timings: "07:00 AM to 09:00 AM (IST)",
         info: "Weekend Batch",
       },
       {
-        date: "2021-06-19",
+        date: "2021-07-19",
         status: "NORMAL",
+        day: "MON - FRI (15 DAYS)",
         timings: "07:00 AM to 09:00 AM (IST)",
       },
     ],
@@ -93,33 +104,38 @@ const courses = [
     skin: "(240deg,#d677c0,#41bbbd)",
     price: 17995,
     discount: 10,
-
     batch: [
       {
         date: "2021-06-14",
-        status: "SOLD OUT",
+        day: "SAT & SUN (5 WEEKS)",
+        status: "FILLING FAST",
         timings: "07:00 AM to 09:00 AM (IST)",
+        info: "Weekend Batch",
       },
       {
         date: "2021-06-19",
         status: "FILLING FAST",
+        day: "MON - FRI (15 DAYS)",
         timings: "08:30 PM to 10:30 PM (IST)",
-        info: "Weekend Batch",
       },
       {
         date: "2021-06-21",
         status: "NORMAL",
+        day: "SAT & SUN (5 WEEKS)",
         timings: "08:30 PM to 10:30 PM (IST)",
+        info: "Weekend Batch",
       },
       {
         date: "2021-07-17",
         status: "NORMAL",
+        day: "SAT & SUN (5 WEEKS)",
         timings: "07:00 AM to 09:00 AM (IST)",
         info: "Weekend Batch",
       },
       {
-        date: "2021-06-19",
+        date: "2021-07-19",
         status: "NORMAL",
+        day: "MON - FRI (15 DAYS)",
         timings: "07:00 AM to 09:00 AM (IST)",
       },
     ],
@@ -138,29 +154,35 @@ const courses = [
     batch: [
       {
         date: "2021-06-14",
+        day: "SAT & SUN (5 WEEKS)",
         status: "SOLD OUT",
         timings: "07:00 AM to 09:00 AM (IST)",
+        info: "Weekend Batch",
       },
       {
         date: "2021-06-19",
-        status: "FILLING FAST",
+        status: "NORMAL",
+        day: "MON - FRI (15 DAYS)",
         timings: "08:30 PM to 10:30 PM (IST)",
-        info: "Weekend Batch",
       },
       {
         date: "2021-06-21",
         status: "NORMAL",
+        day: "SAT & SUN (5 WEEKS)",
         timings: "08:30 PM to 10:30 PM (IST)",
+        info: "Weekend Batch",
       },
       {
         date: "2021-07-17",
         status: "NORMAL",
+        day: "SAT & SUN (5 WEEKS)",
         timings: "07:00 AM to 09:00 AM (IST)",
         info: "Weekend Batch",
       },
       {
-        date: "2021-06-19",
-        status: "NORMAL",
+        date: "2021-07-19",
+        status: "FILLING FAST",
+        day: "MON - FRI (15 DAYS)",
         timings: "07:00 AM to 09:00 AM (IST)",
       },
     ],
@@ -169,4 +191,8 @@ const courses = [
 
 export function getCourses() {
   return courses;
+}
+
+export function getCourse(id) {
+  return courses.find((c) => c._id === id);
 }
