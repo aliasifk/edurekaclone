@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Payment.css";
-
+import Paypal from "./Paypal";
 import { RiVisaLine } from "react-icons/ri";
 import { getCourse } from "../service/fakeCourseService";
 
@@ -14,15 +14,32 @@ const Payment = ({ match }) => {
 
   return (
     <section className="payment">
-      <body className="window payment__process">
-        <h3 className="payment__process__heading">Payment Details</h3>
-        <p className="payment__process__info">Accepted mode of payments</p>
-        <div>
-          <RiVisaLine size="50" />
-        </div>
-        <button className="payment__process__button">Pay Securely</button>
+      <body className="payment__info">
+        <article className="window payment__process">
+          <h3 className="payment__process__heading">Welcome Learner</h3>
+          <p className="payment__process__info">
+            You can now review your order and complete the purchase
+          </p>
+        </article>
+        <article className="window payment__process">
+          <h3 className="payment__process__heading">
+            Batch Selection & Offers
+          </h3>
+        </article>
+        <article className="window payment__process">
+          <h3 className="payment__process__heading">Payment Details</h3>
+          <p className="payment__process__info">Accepted mode of payments</p>
+          <div>
+            <RiVisaLine size="50" />
+          </div>
+          <Paypal
+            description={course.title}
+            amount={course.price * (1 - course.discount / 100) * (1 + 18 / 100)}
+          />
+        </article>
       </body>
-      <article className="payment__details window">
+
+      <article className="window payment__details">
         <p className="payment__details__heading">Order Summary</p>
         <div className="payment__details__fields">
           <div>Course Price:</div>

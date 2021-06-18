@@ -5,10 +5,11 @@ import "./Card.css";
 
 const Cards = ({ history }) => {
   const [courses, setCourses] = useState([]);
+
   useEffect(() => {
     const result = getCourses();
     //get Api calls here
-    setCourses(result);
+    setCourses(result); ///fake json servie
   }, []);
 
   return (
